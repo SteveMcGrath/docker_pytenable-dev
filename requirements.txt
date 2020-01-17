@@ -1,0 +1,5 @@
+pytenable[complete]==1.0.4
+arrow==0.15.5
+bpython==0.18
+click==7.0
+restfly==1.1.1

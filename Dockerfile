@@ -7,14 +7,14 @@ ENV TSC_SECRET_KEY ""
 ENV TSC_ADDRESS ""
 ENV TSC_PORT ""
 
-RUN    mkdir /workspace                 \
-    && apk add --no-cache gcc libc-dev  \
-    && pip install  \
-        arrow       \
-        bpython     \
-        click       \
-        pytenable   \
-        restfly
+RUN mkdir /workspace && apk add --no-cache  \
+    gcc                                     \
+    libc-dev                                \
+    libffi-dev                              \
+    openssl-dev
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
 
 WORKDIR /workspace
 
