@@ -1,4 +1,10 @@
-pytenable[complete]==1.0.4
+requests==2.20
+python-dateutil==2.8.1
+semver==2.9.0
+ipaddress==1.0.23
+defusedxml==0.6.0
+requests-pkcs12==1.6
+docker==4.1.0
 arrow==0.15.5
 bpython==0.18
 click==7.0

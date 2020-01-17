@@ -7,6 +7,7 @@ ENV TSC_SECRET_KEY ""
 ENV TSC_ADDRESS ""
 ENV TSC_PORT ""
 
+
 RUN mkdir /workspace && apk add --no-cache  \
     gcc                                     \
     libc-dev                                \
@@ -15,6 +16,7 @@ RUN mkdir /workspace && apk add --no-cache  \
 
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
+RUN pip install "pytenable[complete]"
 
 WORKDIR /workspace
 
